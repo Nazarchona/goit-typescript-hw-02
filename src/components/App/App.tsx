@@ -1,13 +1,23 @@
 import { useState, useEffect } from 'react';
+
 import 'modern-normalize';
+
 import toast, { Toaster } from 'react-hot-toast';
+
 import SearchBar from '../SearchBar/SearchBar.jsx';
+
 import ImageGallery from '../ImageGallery/ImageGallery.jsx';
+
 import Loader from '../Loader/Loader.jsx';
+
 import ErrorMessage from '../ErrorMessage/ErrorMessage.jsx';
+
 import LoadMoreBtn from '../LoadMoreButton/LoadMoreBtn.jsx';
+
 import ImageModal from '../ImageModal/ImageModal.jsx';
+
 import fetchImages from '../../service/pixabay.js';
+
 
 export interface Image {
   id: number;
@@ -16,15 +26,24 @@ export interface Image {
   largeImageURL: string;
 }
 
+
 export default function App() {
   const [query, setQuery] = useState<string>('');
+  
   const [images, setImages] = useState<Image[]>([]);
+  
   const [loading, setLoading] = useState<boolean>(false);
+  
   const [error, setError] = useState<Error | null>(null);
+  
   const [page, setPage] = useState<number>(1);
+  
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+  
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+  
   const [hasMore, setHasMore] = useState<boolean>(false);
+  
   const [submitted, setSubmitted] = useState<boolean>(false);
 
   useEffect(() => {
