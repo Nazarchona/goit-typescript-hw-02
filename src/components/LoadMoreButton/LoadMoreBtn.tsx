@@ -1,4 +1,4 @@
-import css from './LoadMoreBtn.module.css';
+import css from './LoadMoreButton.module.css';
 
 type Props = {
   onClick: () => void;

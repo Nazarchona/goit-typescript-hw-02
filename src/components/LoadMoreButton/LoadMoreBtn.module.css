@@ -3,11 +3,12 @@
   text-align: center;
 }
 
+
 .btn {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 3px #bfbfbf;
-  background-color: #5a65ff;
+  background-color: #1521cf;
   color: #fff;
 }

@@ -1,11 +1,14 @@
 import ImageCard from '../ImageCard/ImageCard';
+
 import css from './ImageGallery.module.css';
+
 import { Image } from '../App/App';
 
 type Props = {
   images: Image[];
   onImageClick: (arg: Image) => void;
 };
+
 
 export default function ImageGallery({ images, onImageClick }: Props) {
   if (!images.length) {
